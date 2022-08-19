@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'pages/home(trijal).dart';
+import 'pages/home.dart';
 import 'pages/sponsors.dart';
 import 'pages/about_us.dart';
-import 'pages/team.dart';
+import 'pages/team2.dart';
 import 'pages/events.dart';
 import 'pages/schedule.dart';
 void main() {
