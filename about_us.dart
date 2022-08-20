@@ -43,10 +43,10 @@ class _AboutUsState extends State<AboutUs> {
           child: Column(
 
             children: [
-              SizedBox(height: 100),
+              SizedBox(height: 150),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
 
                   Text(
                     'ABOUT US',
@@ -64,39 +64,42 @@ class _AboutUsState extends State<AboutUs> {
                 color: Colors.white,
                 indent: 0,
                 endIndent: 0,
-                height: 80,
+                height: 20,
                 thickness: 2,
               ),
 
 
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 0.48*height,
-                    width : (0.48),
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("images/LOGO FINAL.png"),
-                        fit: BoxFit.fitHeight,
+                children:[
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 1.25/5*height,
+                        width : (1.25/5)*height*(1.5),
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage("images/LOGO FINAL.png"),
+                            fit: BoxFit.fitHeight,
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
-              ),
-
               const Divider(
                 color: Colors.white,
                 indent: 0,
                 endIndent: 0,
-                height: 80,
+                height: 70,
                 thickness: 2,
               ),
 
 
               Container(
-                  child : Padding(
-                    padding: EdgeInsets.fromLTRB(50, 35, 50, 100),
+                  child : const Padding(
+                    padding: EdgeInsets.fromLTRB(70, 0, 70, 100),
                     child: Text(
                       'mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm',
                       style : TextStyle(
@@ -108,8 +111,10 @@ class _AboutUsState extends State<AboutUs> {
               ),
             ],
           ),
+          ],
         ),
       ),
+    ),
     );
   }
 
