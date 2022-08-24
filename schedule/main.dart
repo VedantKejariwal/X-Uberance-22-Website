@@ -19,7 +19,7 @@ import 'package:flutter/material.dart';
 import 'package:xuberence22/schedule1.dart';
 import 'package:xuberence22/schedule2.dart';
 import 'package:xuberence22/schedule3.dart';
-void schedule() => runApp(MaterialApp(
+void main() => runApp(MaterialApp(
   initialRoute: '/day1',
   routes: {
     '/day1': (context) => Day1(),
