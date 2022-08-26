@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-class Event extends StatefulWidget {
+class Eventss extends StatefulWidget {
   String name;
   String about;
   String category;
@@ -11,16 +11,16 @@ class Event extends StatefulWidget {
   String rules;
   String link;
 
-  Event({Key? key, required this.name,required this.about,
+  Eventss({Key? key, required this.name,required this.about,
     required this.category,required this.location,required this.day,required this.time,required this.participants,
     required this.phrase,
     required this.rules, required this.link}) : super(key: key);
 
   @override
-  State<Event> createState() => _EventState(name: name, about: about, category: category, location: location, day: day, time: time, participants: participants,phrase: phrase, rules: rules,link: link);
+  State<Eventss> createState() => _EventssState(name: name, about: about, category: category, location: location, day: day, time: time, participants: participants,phrase: phrase, rules: rules,link: link);
 }
 
-class _EventState extends State<Event> {
+class _EventssState extends State<Event> {
   String name;
   String about;
   String category;
@@ -31,7 +31,7 @@ class _EventState extends State<Event> {
   String phrase;
   String rules;
   String link;
-  _EventState({
+  _EventssState({
     required this.name,required this.about,
     required this.category,required this.location, required this.day,required this.time,required this.participants,
     required this.phrase,
