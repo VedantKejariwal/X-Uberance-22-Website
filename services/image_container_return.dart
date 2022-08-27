@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
+// ignore: must_be_immutable
 class ImgRtr extends StatefulWidget {
   String name;
   String designation;
   String about;
+  String link;
 
-  ImgRtr({Key? key, required this.name, required this.designation, required this.about}) : super(key: key);
+  ImgRtr({Key? key, required this.name, required this.designation, required this.about,required this.link}) : super(key: key);
 
   @override
-  State<ImgRtr> createState() => _ImgRtrState(name:name, designation: designation,about: about);
+  // ignore: no_logic_in_create_state
+  State<ImgRtr> createState() => _ImgRtrState(name:name, designation: designation,about: about,link: link);
 }
 
 class _ImgRtrState extends State<ImgRtr> {
-  String name;String designation; String about;
-  _ImgRtrState({required this.name, required this.designation, required this.about});
+  String name;String designation; String about;String link;
+  _ImgRtrState({required this.name, required this.designation, required this.about,required this.link});
   @override
   Widget build(BuildContext context) {
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(20.0),
@@ -31,11 +35,11 @@ class _ImgRtrState extends State<ImgRtr> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      height: 0.04*MediaQuery.of(context).size.width,
-                      width: 0.04*MediaQuery.of(context).size.width,
+                      height: 0.08*MediaQuery.of(context).size.width,
+                      width: 0.08*MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('images/$name.png'),
+                          image: AssetImage(link),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -58,7 +62,7 @@ class _ImgRtrState extends State<ImgRtr> {
                     ),
                     const SizedBox(height:2,width:0.01),
                     Text(
-                       about,
+                      about,
                       style: const TextStyle(
                         fontSize: 20,
                         fontFamily:"Xavier3" ,
@@ -82,11 +86,11 @@ class _ImgRtrState extends State<ImgRtr> {
               width: 0.125*MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/$name.png'),
+                  image: AssetImage(link),
                   fit: BoxFit.cover,
                 ),
               ),
-              ),
+            ),
           ),
         ),
         const SizedBox(height:4.0, width:0.1),

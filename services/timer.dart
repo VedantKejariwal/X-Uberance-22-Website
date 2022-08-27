@@ -8,7 +8,7 @@ class Countdown extends StatefulWidget {
 }
 
 class _CountdownState extends State<Countdown> {
-  Duration duration = DateTime(2022,10,14,12,0,0,0,0).difference(DateTime.now());
+  Duration duration = DateTime(2022,10,13,12,0,0,0,0).difference(DateTime.now());
   Timer? timer;
   @override
   void initState()
