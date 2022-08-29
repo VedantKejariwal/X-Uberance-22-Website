@@ -46,6 +46,7 @@ class _OffStageState extends State<OffStage> {
 
         child : Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 100),
             Row(
@@ -69,53 +70,44 @@ class _OffStageState extends State<OffStage> {
               thickness: 2,
             ),
             Row(
-
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(255, 0, 106, 0),
-                  child: TextButton(
-                    onPressed: (){
-                      Navigator.pushNamed(context, '/onstage');
-                    },
-                    child: const Text(
-                      'ON STAGE',
-                      style : TextStyle(
-                        color: Colors.white,
-                        fontSize: 27,
-                        fontFamily: 'Xavier2',
-                      ),
+                TextButton(
+                  onPressed: (){
+                    Navigator.pushNamed(context, '/onstage');
+                  },
+                  child: const Text(
+                    'ON STAGE',
+                    style : TextStyle(
+                      color: Colors.white,
+                      fontSize: 27,
+                      fontFamily: 'Xavier2',
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(56, 0, 56, 0),
-                  child: TextButton(
-                    onPressed: (){
-                      Navigator.pushNamed(context, '/offstage');
-                    },
-                    child: const Text(
-                      'OFF STAGE',
-                      style : TextStyle(
-                        color: Colors.white,
-                        fontSize: 27,
-                        fontFamily: 'Xavier2',
-                      ),
+                TextButton(
+                  onPressed: (){
+                    Navigator.pushNamed(context, '/offstage');
+                  },
+                  child: const Text(
+                    'OFF STAGE',
+                    style : TextStyle(
+                      color: Colors.white,
+                      fontSize: 27,
+                      fontFamily: 'Xavier2',
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(106, 0, 0, 0),
-                  child: TextButton(
-                    onPressed: (){
-                      Navigator.pushNamed(context, '/field');
-                    },
-                    child: const Text(
-                      'FIELD',
-                      style : TextStyle(
-                        color: Colors.white,
-                        fontSize: 27,
-                        fontFamily: 'Xavier2',
-                      ),
+                TextButton(
+                  onPressed: (){
+                    Navigator.pushNamed(context, '/field');
+                  },
+                  child: const Text(
+                    'FIELD',
+                    style : TextStyle(
+                      color: Colors.white,
+                      fontSize: 27,
+                      fontFamily: 'Xavier2',
                     ),
                   ),
                 ),
@@ -144,14 +136,14 @@ class _OffStageState extends State<OffStage> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children:
-                            OffStage1.map((offstage1){
+                            OffStage1.map((onstage1){
                               return Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 30),
                                 child: Transform.scale(
                                   scale: 5,
                                   child: IconButton(
                                     onPressed:(){} ,
-                                    icon: Image.asset(offstage1),
+                                    icon: Image.asset(onstage1),
                                   ),
                                 ),
                               );
@@ -162,14 +154,14 @@ class _OffStageState extends State<OffStage> {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children:
-                            OffStage2.map((offstage2){
+                            OffStage2.map((onstage2){
                               return Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 30),
                                 child: Transform.scale(
                                   scale: 5,
                                   child: IconButton(
                                     onPressed:(){} ,
-                                    icon: Image.asset(offstage2),
+                                    icon: Image.asset(onstage2),
                                   ),
                                 ),
                               );

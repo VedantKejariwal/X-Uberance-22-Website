@@ -46,6 +46,7 @@ class _OnStageState extends State<OnStage> {
 
         child : Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 100),
             Row(
@@ -69,53 +70,44 @@ class _OnStageState extends State<OnStage> {
               thickness: 2,
             ),
             Row(
-
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(255, 0, 106, 0),
-                  child: TextButton(
-                    onPressed: (){
-                      Navigator.pushNamed(context, '/onstage');
-                    },
-                    child: const Text(
-                      'ON STAGE',
-                      style : TextStyle(
-                        color: Colors.white,
-                        fontSize: 27,
-                        fontFamily: 'Xavier2',
-                      ),
+                TextButton(
+                  onPressed: (){
+                    Navigator.pushNamed(context, '/onstage');
+                  },
+                  child: const Text(
+                    'ON STAGE',
+                    style : TextStyle(
+                      color: Colors.white,
+                      fontSize: 27,
+                      fontFamily: 'Xavier2',
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(56, 0, 56, 0),
-                  child: TextButton(
-                    onPressed: (){
-                      Navigator.pushNamed(context, '/offstage');
-                    },
-                    child: const Text(
-                      'OFF STAGE',
-                      style : TextStyle(
-                        color: Colors.white,
-                        fontSize: 27,
-                        fontFamily: 'Xavier2',
-                      ),
+                TextButton(
+                  onPressed: (){
+                    Navigator.pushNamed(context, '/offstage');
+                  },
+                  child: const Text(
+                    'OFF STAGE',
+                    style : TextStyle(
+                      color: Colors.white,
+                      fontSize: 27,
+                      fontFamily: 'Xavier2',
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(106, 0, 0, 0),
-                  child: TextButton(
-                    onPressed: (){
-                      Navigator.pushNamed(context, '/field');
-                    },
-                    child: const Text(
-                      'FIELD',
-                      style : TextStyle(
-                        color: Colors.white,
-                        fontSize: 27,
-                        fontFamily: 'Xavier2',
-                      ),
+                TextButton(
+                  onPressed: (){
+                    Navigator.pushNamed(context, '/field');
+                  },
+                  child: const Text(
+                    'FIELD',
+                    style : TextStyle(
+                      color: Colors.white,
+                      fontSize: 27,
+                      fontFamily: 'Xavier2',
                     ),
                   ),
                 ),
