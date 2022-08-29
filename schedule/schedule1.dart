@@ -8,9 +8,11 @@ class Day1 extends StatefulWidget {
 }
 
 class _Day1State extends State<Day1> {
-  List Day1Event =['Event11','Event21','Event31','Event41','Event51','Event61','Event71'];
-  List Day1Venue =['Venue11','Venue21','Venue31','Venue41','Venue51','Venue61','Venue71'];
-  List Day1Timing =['Time11','Time21','Time31','Time41','Time51','Time61','Time71'];
+
+  List Day1EventName =['X-Enter','X-Goal','X-Pull','X-Hoop','X-Abhinoy','X-Hop','X-Calibre','X-Gaana','X-Pong','X-Drop','X-60','X-30','X-Vogue'];
+  List Day1Event =['Opening Ceremony','Girls Football','Boys Tug-O-War','Basket Ball','Bengali Play','dance Face Off','Debate Prelims','Antakshari','Table Tennis','Rap Battle/Beatboxing','One minute to fame','Half a Minute (Extempore)','Fashion Show'];
+  List Day1Venue =['Main Auditorium','Back Field','Primary School Field','Basket Ball Court','Main Auditorium','Gymnasium Podium','Reading Room','Xavier Hall','Games Room','Soumitra Sadan','Big Parlour','AV Room','Main Auditorium'];
+  List Day1Timing =['11 AM - 12 PM','12:30','12:30','12:30','12:30','12:30','12:30','1:00','1:00','1:30','1:30','1:30','4:30'];
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -44,198 +46,266 @@ class _Day1State extends State<Day1> {
         ),
 
         child : Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(height: 100),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children : const [
-                Text(
-                  'SCHEDULE',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 36,
-                    fontFamily: 'Xavier1',
-                  ),
-                ),
-              ],
-            ),
-            const Divider(
-              color: Colors.white,
-              indent: 0,
-              endIndent: 0,
-              height: 55,
-              thickness: 2,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-              children: [
-                TextButton(
-                  onPressed: (){
-                    Navigator.pushNamed(context, '/day1');
-                  },
-                  child: const Text(
-                    'DAY 1',
-                    style : TextStyle(
-                      color: Colors.white,
-                      fontSize: 27,
-                      fontFamily: 'Xavier2',
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: (){
-                    Navigator.pushNamed(context, '/day2');
-                  },
-                  child: const Text(
-                    'DAY 2',
-                    style : TextStyle(
-                      color: Colors.white,
-                      fontSize: 27,
-                      fontFamily: 'Xavier2',
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: (){
-                    Navigator.pushNamed(context, '/day3');
-                  },
-                  child: const Text(
-                    'DAY 3',
-                    style : TextStyle(
-                      color: Colors.white,
-                      fontSize: 27,
-                      fontFamily: 'Xavier2',
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const Divider(
-              color: Colors.white,
-              indent: 0,
-              endIndent: 0,
-              height: 55,
-              thickness: 2,
-            ),
             Expanded(
               child: SingleChildScrollView(
-                child :Container(
-                  padding: const EdgeInsets.fromLTRB(100, 30, 100, 100),
-                  child : Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children : const [
                           Text(
-                            'EVENTS',
-                            style : TextStyle(
+                            'SCHEDULE',
+                            style: TextStyle(
                               color: Colors.white,
-                              fontSize: 23,
-                              fontFamily: 'Xavier2',
-                            ),
-                          ),
-                          Text(
-                            'VENUE',
-                            style : TextStyle(
-                              color: Colors.white,
-                              fontSize: 23,
-                              fontFamily: 'Xavier2',
-                            ),
-                          ),
-                          Text(
-                            'TIMINGS',
-                            style : TextStyle(
-                              color: Colors.white,
-                              fontSize: 23,
-                              fontFamily: 'Xavier2',
+                              fontSize: 36,
+                              fontFamily: 'Xavier1',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 20),
+                      const Divider(
+                        color: Colors.white,
+                        indent: 0,
+                        endIndent: 0,
+                        height: 55,
+                        thickness: 2,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children:
-                            Day1Event.map((Event){
-                              return Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
-                                child: TextButton(
-                                  onPressed: (){},
-                                  child: Text(
-                                    Event,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontFamily: 'Xavier2',
-                                    ),
-                                  ),
-                                ),
-                              );
-
-                            }).toList(),
-
+                          TextButton(
+                            onPressed: (){
+                              Navigator.pushNamed(context, '/day1');
+                            },
+                            child: const Text(
+                              'DAY 1',
+                              style : TextStyle(
+                                color: Colors.white,
+                                fontSize: 27,
+                                fontFamily: 'Xavier2',
+                              ),
+                            ),
                           ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children:
-                            Day1Venue.map((Venue){
-                              return Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
-                                child: TextButton(
-                                  onPressed: (){},
-                                  child: Text(
-                                    Venue,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontFamily: 'Xavier2',
-                                    ),
-                                  ),
-                                ),
-                              );
-                            }).toList(),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.pushNamed(context, '/day2');
+                            },
+                            child: const Text(
+                              'DAY 2',
+                              style : TextStyle(
+                                color: Colors.white,
+                                fontSize: 27,
+                                fontFamily: 'Xavier2',
+                              ),
+                            ),
                           ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children:
-                            Day1Timing.map((Time){
-                              return Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
-                                child: TextButton(
-                                  onPressed: (){},
-                                  child: Text(
-                                    Time,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontFamily: 'Xavier2',
-                                    ),
-                                  ),
-                                ),
-                              );
-                            }).toList(),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.pushNamed(context, '/day3');
+                            },
+                            child: const Text(
+                              'DAY 3',
+                              style : TextStyle(
+                                color: Colors.white,
+                                fontSize: 27,
+                                fontFamily: 'Xavier2',
+                              ),
+                            ),
                           ),
-
                         ],
                       ),
-                    ],
-                  ),
+                      const Divider(
+                        color: Colors.white,
+                        indent: 0,
+                        endIndent: 0,
+                        height: 55,
+                        thickness: 2,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(0, 30, 0, 100),
+                        child : Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
 
-                ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: const [
+                                Text(
+                                  'EVENTS',
+                                  style : TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 23,
+                                    fontFamily: 'Xavier2',
+                                  ),
+                                ),
+                                Text(
+                                  'VENUE',
+                                  style : TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 23,
+                                    fontFamily: 'Xavier2',
+                                  ),
+                                ),
+                                Text(
+                                  'TIMINGS',
+                                  style : TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 23,
+                                    fontFamily: 'Xavier2',
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 20),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 70),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children:
+                                    Day1EventName.map((Event){
+                                      return Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
+                                        child: TextButton(
+                                          onPressed: (){},
+                                          child: RichText(
+                                            text: TextSpan(
+                                              children: [
+                                                TextSpan(
+                                                  text : '$Event\n',
+                                                  style: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 23,
+                                                    fontFamily: 'Xavier2',
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text: Day1Event[Day1EventName.indexOf(Event)],
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 10,
+                                                    fontFamily: 'Xavier2',
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      );
+
+                                    }).toList(),
+
+                                  ),
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:
+                                    Day1Venue.map((Venue){
+                                      return Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 17),
+                                        child: TextButton(
+                                          onPressed: (){},
+                                          child: Text(
+                                            Venue,
+                                            style: const TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 23,
+                                              fontFamily: 'Xavier2',
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    }).toList(),
+                                  ),
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:
+                                    Day1Timing.map((Time){
+                                      return Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 17),
+                                        child: TextButton(
+                                          onPressed: (){},
+                                          child: Text(
+                                            Time,
+                                            style: const TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 23,
+                                              fontFamily: 'Xavier2',
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    }).toList(),
+                                  ),
+
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+
+                      ),
+                      Container(
+                        color: const Color(0xff2F303A),
+                        height: ((1.6/5)*height),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:[
+                                  const SizedBox(height:5, width:10),
+                                  const Text("Location", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
+                                  Container(
+                                    height: (3.5/5)*((1.6/5)*height),
+                                    width: (1/5.5)*width,
+                                    color: Colors.black,
+                                  ),
+                                  const Text("30 Mother Teresa Sarani, Kolkata-700016", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
+                                ]
+                            ),
+                            Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:const [
+                                  SizedBox(height:0, width:10),
+                                  Text("Contact Us", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
+                                  Text("Gmail: xuberancetechteam2022@gmail.com", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
+                                  Text("Phone1: 9876543210", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
+                                  Text("Phone2: 0123456789", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
+                                ]
+                            ),
+                            Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:const [
+                                  SizedBox(height:0, width:10),
+                                  Text("Social Handles", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
+                                  Text("Facebook", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
+                                  Text("Instagram", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
+                                  Text("Twitter", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
+                                ]
+                            ),
+                          ],
+                        ),
+                      ),
+                    ]),
               ),
             ),
           ],
         ),
       ),
-
     );
+
+
   }
 
 }
