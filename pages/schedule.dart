@@ -56,26 +56,191 @@ class _ScheduleState extends State<Schedule> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    List Events = [] ;
-    List Timing = [];
-    List Venue  = [];
+    List<Widget> Events = [Text(
+      'EVENTS',
+      style : TextStyle(
+        color: Colors.white,
+        fontSize: 23,
+        fontFamily: 'Xavier2',
+      ),
+    ),SizedBox(height:20)] ;
+    List<Widget> Timing = [Text(
+      'TIMINGS',
+      style : TextStyle(
+        color: Colors.white,
+        fontSize: 23,
+        fontFamily: 'Xavier2',
+      ),
+    ),SizedBox(height:20)];
+    List<Widget> Venue  = [Text(
+      'VENUE',
+      style : TextStyle(
+        color: Colors.white,
+        fontSize: 23,
+        fontFamily: 'Xavier2',
+      ),
+    ),SizedBox(height:20)];
     if(day == 1)
     {
-      Events = c.Day1Event;
-      Timing = c.Day1Timing;
-      Venue = c.Day1Venue;
+      Events.insertAll(2,c.Day1Event.map((Event){
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
+          child: TextButton(
+            onPressed: (){},
+            child: Text(
+              Event,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontFamily: 'Xavier2',
+              ),
+            ),
+          ),
+        );
+
+      }).toList());
+      Timing.insertAll(2,c.Day1Timing.map((Event){
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
+          child: TextButton(
+            onPressed: (){},
+            child: Text(
+              Event,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontFamily: 'Xavier2',
+              ),
+            ),
+          ),
+        );
+
+      }).toList());
+      Venue.insertAll(2,c.Day1Venue.map((Event){
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
+          child: TextButton(
+            onPressed: (){},
+            child: Text(
+              Event,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontFamily: 'Xavier2',
+              ),
+            ),
+          ),
+        );
+
+      }).toList());
     }
     if(day == 2)
     {
-      Events = c.Day2Event;
-      Timing = c.Day2Timing;
-      Venue = c.Day2Venue;
+      Events.insertAll(2,c.Day2Event.map((Event){
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
+          child: TextButton(
+            onPressed: (){},
+            child: Text(
+              Event,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontFamily: 'Xavier2',
+              ),
+            ),
+          ),
+        );
+
+      }).toList());
+      Timing.insertAll(2,c.Day2Timing.map((Event){
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
+          child: TextButton(
+            onPressed: (){},
+            child: Text(
+              Event,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontFamily: 'Xavier2',
+              ),
+            ),
+          ),
+        );
+
+      }).toList());
+      Venue.insertAll(2,c.Day2Venue.map((Event){
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
+          child: TextButton(
+            onPressed: (){},
+            child: Text(
+              Event,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontFamily: 'Xavier2',
+              ),
+            ),
+          ),
+        );
+
+      }).toList());
     }
     if(day == 3)
     {
-      Events = c.Day3Event;
-      Timing = c.Day3Timing;
-      Venue = c.Day3Venue;
+      Events.insertAll(2,c.Day3Event.map((Event){
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
+          child: TextButton(
+            onPressed: (){},
+            child: Text(
+              Event,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontFamily: 'Xavier2',
+              ),
+            ),
+          ),
+        );
+
+      }).toList());
+      Timing.insertAll(2,c.Day3Timing.map((Event){
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
+          child: TextButton(
+            onPressed: (){},
+            child: Text(
+              Event,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontFamily: 'Xavier2',
+              ),
+            ),
+          ),
+        );
+
+      }).toList());
+      Venue.insertAll(2,c.Day3Venue.map((Event){
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
+          child: TextButton(
+            onPressed: (){},
+            child: Text(
+              Event,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+                fontFamily: 'Xavier2',
+              ),
+            ),
+          ),
+        );
+
+      }).toList());
     }
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -138,7 +303,7 @@ class _ScheduleState extends State<Schedule> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
                       children: [
-                        TextButton(
+                        ElevatedButton(
                           onPressed: (){
                             navigateToDay(context, 1);
                           },
@@ -151,7 +316,7 @@ class _ScheduleState extends State<Schedule> {
                             ),
                           ),
                         ),
-                        TextButton(
+                        ElevatedButton(
                           onPressed: (){
                             navigateToDay(context, 2);
                           },
@@ -164,7 +329,7 @@ class _ScheduleState extends State<Schedule> {
                             ),
                           ),
                         ),
-                        TextButton(
+                        ElevatedButton(
                           onPressed: (){
                             navigateToDay(context, 3);
                           },
@@ -186,113 +351,26 @@ class _ScheduleState extends State<Schedule> {
                       height: 55,
                       thickness: 2,
                     ),
-                        Container(
-                          padding: const EdgeInsets.fromLTRB(100, 30, 100, 100),
-                          child : Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children:
+                              Events,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children:
+                              Venue
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children:
+                              Timing
+                            ),
 
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: const [
-                                  Text(
-                                    'EVENTS',
-                                    style : TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 23,
-                                      fontFamily: 'Xavier2',
-                                    ),
-                                  ),
-                                  Text(
-                                    'VENUE',
-                                    style : TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 23,
-                                      fontFamily: 'Xavier2',
-                                    ),
-                                  ),
-                                  Text(
-                                    'TIMINGS',
-                                    style : TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 23,
-                                      fontFamily: 'Xavier2',
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 20),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children:
-                                    Events.map((Event){
-                                      return Padding(
-                                        padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
-                                        child: TextButton(
-                                          onPressed: (){},
-                                          child: Text(
-                                            Event,
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 15,
-                                              fontFamily: 'Xavier2',
-                                            ),
-                                          ),
-                                        ),
-                                      );
-
-                                    }).toList(),
-
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children:
-                                    Venue.map((Venue){
-                                      return Padding(
-                                        padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
-                                        child: TextButton(
-                                          onPressed: (){},
-                                          child: Text(
-                                            Venue,
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 15,
-                                              fontFamily: 'Xavier2',
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    }).toList(),
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children:
-                                    Timing.map((Time){
-                                      return Padding(
-                                        padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
-                                        child: TextButton(
-                                          onPressed: (){},
-                                          child: Text(
-                                            Time,
-                                            style: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 15,
-                                              fontFamily: 'Xavier2',
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    }).toList(),
-                                  ),
-
-                                ],
-                              ),
-                            ],
-                          ),
-
+                          ],
                         ),
                     Container(
                       color: const Color(0xff2F303A),

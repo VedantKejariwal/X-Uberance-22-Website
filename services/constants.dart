@@ -1,20 +1,22 @@
 // ignore_for_file: non_constant_identifier_names
 
 import'../pages/event_description.dart';
-List Day1Event =['Event1','Event2','Event3','Event4','Event5','Event6','Event7','Event1','Event2','Event3','Event4','Event5','Event6','Event7'];
-List Day1Venue =['Venue1','Venue2','Venue3','Venue4','Venue5','Venue6','Venue7','Venue1','Venue2','Venue3','Venue4','Venue5','Venue6','Venue7'];
-List Day1Timing =['Time1','Time1','Time1','Time1','Time1','Time1','Time1','Time1','Time1','Time1','Time1','Time1','Time1','Time1'];
-List Day2Event =['Event1','Event2','Event3','Event4','Event5','Event6','Event7'];
-List Day2Venue =['Venue1','Venue2','Venue3','Venue4','Venue5','Venue6','Venue7'];
-List Day2Timing =['Time2','Time2','Time2','Time2','Time2','Time2','Time2'];
-List Day3Event =['Event1','Event2','Event3','Event4','Event5','Event6','Event7'];
-List Day3Venue =['Venue1','Venue2','Venue3','Venue4','Venue5','Venue6','Venue7'];
-List Day3Timing =['Time3','Time3','Time3','Time3','Time3','Time3','Time3'];
+List Day1Event =['X-Enter','X-Log','X-Snap','X-Code','X-Goal','X-Pull','X-Hoop','X-Abhinoy','X-Hop','X-Calibre','X-Gaana','X-Pong','X-Drop','X-60','X-30','X-Vogue'];
+List Day1Venue =['Main Auditorium','School Campus','School Campus','Computer Lab','Back Field','Primary School Field','Basket Ball Court','Main Auditorium','Gymnasium Podium','Reading Room','Xavier Hall','Games Room','Soumitra Sadan','Big Parlour','AV Room','Main Auditorium'];
+List Day1Timing =['11 AM - 12 PM','Full Day','Full Day','12:00','12:30','12:30','12:30','12:30','12:30','12:30','1:00','1:00','1:30','1:30','1:30','4:30'];
+
+List Day2Event =['X-Log','X-Snap','X-Goal','X-Wicket','X-Mate','X-Code','X-Splash','X-Pull','X-','X-Rhyme','X-Pun','X-Raga','X-Quizite','X-Trial','X-Acoustic'];
+List Day2Venue =['School Campus','School Campus','Back Field','Basket Ball Court','Big Parlour','Computer Lab','Games Room','Primary School Field','AV Room','Reading Room','Main Auditorium','Xavier Hall','Reading Room','AV Room','Main Auditorium'];
+List Day2Timing =['Full Day','Full Day','8:30','8:30','8:30','8:30','9:00','9:00','9:00','9:00','10:00','12:00','12:30','2:00','2:00'];
+
+List Day3Event =['X-Spike','X-Calibre','X-Bid','X-Act','X-Code','X-Hunt','X-Travagance','X-uent'];
+List Day3Venue =['Back Field','Xavier Hall','Reading Room','AV Room','Computer Lab','School Campus','Main Auditorium','Main Auditorium'];
+List Day3Timing =['8:30','8:30','9:00','9:00','9 AM - 11 AM','10:00','2:30','6:00'];
 List Sporting1 =["X-GOAL","X-HOOP","X-PONG","X-SPIKE","X-PULL","X-MATE","X-WICKET","X-FIFA",];
 List Offstage1 = ["X-QUIZITE" , "X-GAANA","X-SPLASH","X-TRIAL", "X-30","X-CALIBRE","X-BID" , "X-HUNT","X-CODE","X-SNAP","X-MONTAGE","X-BET",];
-List Onstage1 = [ "X-60","X-ABHINOY","X-ACT","X-DROP", "X-RHYME","X-RAGA", "X-HOP","X-TRAVAGANCE","X-ACOUSTIC","X-PUN","X-VOGUE", ];
+List Onstage1 = [ "X-QUIZITE","X-ABHINOY","X-ACT","X-DROP", "X-RHYME","X-RAGA", "X-HOP","X-TRAVAGANCE","X-ACOUSTIC","X-PUN","X-VOGUE","X-VENT" ];
 List<Eventss> Sporting = [
-  Eventss(name: "X-GOAL", about: "FOOTBALL", category: "SPORTING", location: "BACK  FIELD", day: "2", time: "8:30", participants: "7+3 (SUBSTITUTES)", phrase: "Scoring goals is not as easy as Ronaldo shows it. SIIIIIUUUUUU!",
+  Eventss(name: "X-GOAL", about: "FOOTBALL", category: "SPORTING", location: "BACK  FIELD", day: "2", time: "8:30", participants: "7 + 3", phrase: "Scoring goals is not as easy as Ronaldo shows it. SIIIIIUUUUUU!",
       rules: """Football is a game involving two teams who try to manoeuvre the ball into the other team's goal..
 
 1. No. of participants : 7+3(substitutes)
@@ -36,7 +38,7 @@ List<Eventss> Sporting = [
 """,
       link: "images/X-GOAL"),
 
-  Eventss(name: "X-HOOP", about: "BASKETBALL", category: "SPORTING", location: "BASKETBALL COURT", day: "1", time: "12:30", participants: "5+5", phrase: "Dunk like Lebron, Shoot like Larry.",
+  Eventss(name: "X-HOOP", about: "BASKETBALL", category: "SPORTING", location: "BASKETBALL COURT", day: "1", time: "12:30", participants: "5 + 5", phrase: "Dunk like Lebron, Shoot like Larry.",
     rules: """Basketball is a team sport in which two teams compete with the objective of shooting a basketball through the defender's hoop, while preventing the opposing team from shooting through their own hoop.
 
 1. No. of participants : 5+5
@@ -61,7 +63,7 @@ List<Eventss> Sporting = [
 """,
     link: "images/X-HOOP",),
 
-  Eventss(name: "X-PONG", about:"TABLE TENNIS", category: "SPORTING", location: "Games Room", day: "1", time: "1:00", participants: "", phrase: "A table where you actually play.",
+  Eventss(name: "X-PONG", about:"TABLE TENNIS", category: "SPORTING", location: "Games Room", day: "1", time: "1:00", participants: "4", phrase: "A table where you actually play.",
       rules: """Table tennis, also known as ping-pong, is a sport in which two or four players hit a lightweight ball, also known as the ping-pong ball, back and forth across a table using small solid rackets. The game takes place on a hard table divided by a net.
 
 1. No.of participants : 4 ( 2 singles , 1 doubles ) 
@@ -83,7 +85,7 @@ List<Eventss> Sporting = [
 """,
       link: "images/X-PONG"),
 
-  Eventss(name: "X-SPIKE", about:"VOLLEYBALL", category: "SPORTING", location: "Back Field", day: "3", time: "8:30", participants: "", phrase: "Can’t let the ball bounce.",
+  Eventss(name: "X-SPIKE", about:"VOLLEYBALL", category: "SPORTING", location: "Back Field", day: "3", time: "8:30", participants: "6 + 3", phrase: "Can’t let the ball bounce.",
       rules: """Volleyball, Game played by two teams of six players each, in which an inflated ball is volleyed over a high net. Each team tries to make the ball touch the court within the opposing side's playing areas before it can be returned. A team is allowed to touch the ball three times before returning it.
 
 
@@ -103,7 +105,7 @@ List<Eventss> Sporting = [
 """,
       link: "images/X-SPIKE"),
 
-  Eventss(name: "X-PULL", about:"TUG OF WAR", category: "SPORTING", location: "Primary School Field", day: "1", time: "12:30", participants: "", phrase: "A sport where eating burgers helps.",
+  Eventss(name: "X-PULL", about:"TUG OF WAR", category: "SPORTING", location: "Primary School Field", day: "1", time: "12:30", participants: "10 + 2", phrase: "A sport where eating burgers helps.",
       rules: """Tug of war is a sport that pits two teams against each other in a test of strength: teams pull on opposite ends of a rope, with the goal being to bring the rope a certain distance in one direction against the force of the opposing team's pull.
 
 1. No. of participants : 10+2(substitutes)
@@ -120,7 +122,7 @@ List<Eventss> Sporting = [
 """,
       link: "images/X-PULL"),
 
-  Eventss(name: "X-MATE", about:"CHESS", category: "SPORTING", location: "Big Parlour", day: "2", time: "8:30", participants: "", phrase: "Another battle between the colours.",
+  Eventss(name: "X-MATE", about:"CHESS", category: "SPORTING", location: "Big Parlour", day: "2", time: "8:30", participants: "2", phrase: "Another battle between the colours.",
       rules: """Chess is a board game played between two players.. The current form of the game emerged in Spain and the rest of Southern Europe during the second half of the 15th century after evolving from chaturanga, a similar but much older game of Indian origin.
  
 1. No. of participants : 2 ( Teams may consist both boys and girls ) 
@@ -139,7 +141,7 @@ List<Eventss> Sporting = [
 """,
       link: "images/X-MATE"),
 
-  Eventss(name: "X-WICKET", about: "BOX CRICKET", category: "SPORTING", location: "Basketball Court", day: "2", time: "8:30", participants: "", phrase: "When will Kohli score his 71st Century?",
+  Eventss(name: "X-WICKET", about: "BOX CRICKET", category: "SPORTING", location: "Basketball Court", day: "2", time: "8:30", participants: "8 + 2", phrase: "When will Kohli score his 71st Century?",
       rules: """Indoor cricket or box cricket involves two teams with 6-8 players each playing in a closed space, usually a net-covered turf. Most matches are played within an hour's time frame with rules set before the game or tournament.
 
 1. No. of participants 8 + 2 (rolling substitutes) + 3 (normal substitutes)
@@ -160,7 +162,7 @@ List<Eventss> Sporting = [
 """,
       link: "images/X-WICKET"),
 
-  Eventss(name: "X-O☐Δ", about: "FIFA", category: "SPORTING", location: "AV Room", day: "2", time: "9:00", participants: "", phrase:"EA SPORTS IT'S IN THE GAME!",
+  Eventss(name: "X-O☐Δ", about: "FIFA", category: "SPORTING", location: "AV Room", day: "2", time: "9:00", participants: "1 + 1", phrase:"EA SPORTS IT'S IN THE GAME!",
       rules: """Fifa is a popular Esports game played throughout the world. It has special rights purchased by EA which allows it to retain its name, which is kept after the biggest football tournament; Fifa World Cup.
 
 1. No. of participants : 1+1
@@ -183,7 +185,7 @@ List<Eventss> Sporting = [
 ];
 
 List<Eventss> OffStage = [
-  Eventss(name: "X-QUIZITE", about: "QUIZ", category: "OFF-STAGE", location: "Reading Room", day: "2", time: "12:30", participants: "", phrase:"Where a smart answer wont get you fired. (iykyk)",
+  Eventss(name: "X-QUIZITE", about: "QUIZ", category: "OFF-STAGE", location: "Reading Room", day: "2", time: "12:30", participants: "4", phrase:"Where a smart answer wont get you fired. (iykyk)",
       rules: """A quiz can be defined as a game or brain teaser to test knowledge. It can contain an element of competition when participants play against each other to get the highest score, which makes helps participants become more engaged
 
 1. No. of participants: 4
@@ -199,7 +201,7 @@ List<Eventss> OffStage = [
 """,
       link: "images/X-QUIZITE"),
 
-  Eventss(name: "X-GAANA", about: "ANTAKSHARI", category: "OFF-STAGE", location: "Xavier Hall", day: "1", time: "1:00", participants: "", phrase:"X se gaao! X se!",
+  Eventss(name: "X-GAANA", about: "ANTAKSHARI", category: "OFF-STAGE", location: "Xavier Hall", day: "1", time: "1:00", participants: "2", phrase:"X se gaao! X se!",
       rules: """Antakshari is a spoken parlour game played in India. Each contestant sings the first verse of a song that begins with the consonant of Hindi alphabet on which the previous contestant's song ended. There are many other interesting ways to play.
 
 1. No. of participants: 2
@@ -213,7 +215,7 @@ List<Eventss> OffStage = [
 """,
       link: "images/X-GAANA"),
 
-  Eventss(name: "X-SPLASH", about: "SKETCHES AND SPRAY PAINTING", category: "OFF-STAGE", location: "Games Room", day: "2", time: "9:00", participants: "", phrase:"The EARTH without ART is “EH”!!",
+  Eventss(name: "X-SPLASH", about: "SKETCHES AND SPRAY PAINTING", category: "OFF-STAGE", location: "Games Room", day: "2", time: "9:00", participants: "1 + 1", phrase:"The EARTH without ART is “EH”!!",
       rules: """Sketch, traditionally a rough drawing or painting in which an artist notes down his preliminary ideas for a work that will eventually be realised with greater precision and detail. t.Spray painting is a painting technique in which a device sprays coating material (paint, ink, varnish, etc.) through the air onto a surface. 
 
 1. Participants: 1+1
@@ -229,7 +231,7 @@ List<Eventss> OffStage = [
 """,
       link: "images/X-SPLASH"),
 
-  Eventss(name: "X-TRIAL", about: "MOOT COURT", category: "OFF-STAGE", location: "AV Room", day: "2", time: "2:00", participants: "", phrase:"When losing the case, find a loophole.",
+  Eventss(name: "X-TRIAL", about: "MOOT COURT", category: "OFF-STAGE", location: "AV Room", day: "2", time: "2:00", participants: "2", phrase:"When losing the case, find a loophole.",
       rules: """Moot court involves simulated proceedings before an appellate court, arbitral tribunal, or international dispute resolution body. These are different from mock trials that involve simulated jury trials or bench trials..
 
 1. Participants: 2
@@ -247,7 +249,7 @@ List<Eventss> OffStage = [
 """,
       link: "images/X-TRIAL"),
 
-  Eventss(name: "X-30", about: "EXTEMPORE - HALF A MINUTE", category: "OFF-STAGE", location: "AV Room", day: "1", time: "1:30", participants: "", phrase:"You can speak well, if your tongue can deliver the message of your heart.",
+  Eventss(name: "X-30", about: "EXTEMPORE - HALF A MINUTE", category: "OFF-STAGE", location: "AV Room", day: "1", time: "1:30", participants: "1", phrase:"You can speak well, if your tongue can deliver the message of your heart.",
       rules: """It tests the person's fluency and linguistic ability as one gets almost no time to prepare and has to start speaking as soon as the topic is provided. Even a slight pause may lead to deduction of points.
 
 1. No. of participants : 1
@@ -265,7 +267,7 @@ List<Eventss> OffStage = [
 """,
       link: "images/X-30"),
 
-  Eventss(name: "X-CALIBRE", about: "DEBATE", category: "OFF-STAGE", location: "Xavier Hall", day: "3", time: "8:30", participants: "", phrase:"Don't raise your voice, raise your stance.",
+  Eventss(name: "X-CALIBRE", about: "DEBATE", category: "OFF-STAGE", location: "Xavier Hall", day: "3", time: "8:30", participants: "3", phrase:"Don't raise your voice, raise your stance.",
       rules: """Knowledge increases on being shared. Share your arguments and let the judges decide which is more convincing.
 
 1.  Participants: 3 member teams per school
@@ -291,7 +293,7 @@ List<Eventss> OffStage = [
 """,
       link: "images/X-CALIBRE"),
 
-  Eventss(name: "X-BID", about: "IPL AUCTION", category: "OFF-STAGE", location: "Reading Room", day: "3", time: "9:00", participants: "", phrase:"What is the similarity between Siddhant Malhotra and Shikhar Dhawan? They have both been dropped.",
+  Eventss(name: "X-BID", about: "IPL AUCTION", category: "OFF-STAGE", location: "Reading Room", day: "3", time: "9:00", participants: "2", phrase:"What is the similarity between Siddhant Malhotra and Shikhar Dhawan? They have both been dropped.",
       rules: """The IPL auction is a yearly event conducted by BCCI to auction the cricket players to various franchises.This will be a simulation to the same where a team has to be built and it has to be further pitched to the judges for value and sponsors.
 
 1. Participants: 2
@@ -307,7 +309,7 @@ List<Eventss> OffStage = [
 """,
       link: "images/X-BID"),
 
-  Eventss(name: "X-HUNT", about: "TREASURE HUNT", category: "OFF-STAGE", location: "School Campus", day: "3", time: "10:00", participants: "", phrase:"Find the X.",
+  Eventss(name: "X-HUNT", about: "TREASURE HUNT", category: "OFF-STAGE", location: "School Campus", day: "3", time: "10:00", participants: "2", phrase:"Find the X.",
       rules: """A treasure hunt is a game in which the organisers prepare a list defining specific items, which the participants seek to gather or complete all items on the list, usually without purchasing them.
 
 1. No. of participants: 2
@@ -316,8 +318,8 @@ List<Eventss> OffStage = [
 
 """,
       link: "images/X-HUNT"),
-   Eventss(name: "X-CODE", about: "HACKATHON", category: "OFF-STAGE", location: "Computer Lab", day: "1-3", time: "", participants: "", phrase:"“If the outside is so good, why has man spent thousands of years trying to perfect the inside?”",
-        rules: """A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance.
+  Eventss(name: "X-CODE", about: "HACKATHON", category: "OFF-STAGE", location: "Computer Lab", day: "1-3", time: "", participants: "2", phrase:"“If the outside is so good, why has man spent thousands of years trying to perfect the inside?”",
+      rules: """A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance.
 
 1. No. of participants: 2
 
@@ -336,9 +338,9 @@ List<Eventss> OffStage = [
 8.The event will be held offline and the rest of the rules will be provided later.
 
 """,
-        link: "images/X-CODE"),
+      link: "images/X-CODE"),
 
-  Eventss(name: "X-SNAP", about: "PHOTOGRAPHY", category: "OFF-STAGE", location: "School Campus", day: "1 & 2", time: "Full Day", participants: "", phrase:"Photography is an art where Earth is the canvas. It is limitless and the skill of a photographer brings forth its beauty.",
+  Eventss(name: "X-SNAP", about: "PHOTOGRAPHY", category: "OFF-STAGE", location: "School Campus", day: "1 & 2", time: "Full Day", participants: "2", phrase:"Photography is an art where Earth is the canvas. It is limitless and the skill of a photographer brings forth its beauty.",
       rules: """
 1.  Number of participants- 2 per school (classes 11-12)
 
@@ -367,7 +369,7 @@ List<Eventss> OffStage = [
 """,
       link: "images/X-SNAP"),
 
-  Eventss(name: "MONTAGE", about: "VLOGGING", category: "OFF-STAGE", location: "School Campus", day: "1-2", time: "All day", participants: "",
+  Eventss(name: "MONTAGE", about: "VLOGGING", category: "OFF-STAGE", location: "School Campus", day: "1-2", time: "All day", participants: "2",
       phrase:"""
 Welcome to my youtube channel!
 Check out the link in the description.
@@ -401,7 +403,7 @@ Check out the link in the description.
 """,
       link: "images/X-MONTAGE"),
 
-  Eventss(name: "X-BET", about: "REPRESENTATIVE EVENTS", category: "OFF-STAGE", location: "Online", day: "Pre-Fest", time: "", participants: "", phrase:"Don't play the odds, play the man.",
+  Eventss(name: "X-BET", about: "REPRESENTATIVE EVENTS", category: "OFF-STAGE", location: "Online", day: "Pre-Fest", time: "", participants: "2", phrase:"Don't play the odds, play the man.",
       rules: """The watermark of X-Uberance. Exclusivity is what makes it fun.
 
 1. Participants: School Representatives
@@ -416,7 +418,7 @@ Check out the link in the description.
 
 
 List<Eventss> OnStage = [
-  Eventss(name: "X-60", about: "ONE MINUTE TO FAME", category: "ON-STAGE", location: "Big Parlour", day: "2", time: "8:30", participants: "", phrase:"Race against the clock. A minute is all you have got.",
+  Eventss(name: "X-60", about: "ONE MINUTE TO FAME", category: "ON-STAGE", location: "Big Parlour", day: "2", time: "8:30", participants: "1", phrase:"Race against the clock. A minute is all you have got.",
       rules: """60 Seconds to Fame is an event where participants are required to submit their videos performing some activities. The whole idea of the event is to provide students with a platform to showcase their talent.
 
 1. No. of participants : 1 
@@ -428,7 +430,7 @@ List<Eventss> OnStage = [
 """,
       link: "images/X-60"),
 
-  Eventss(name: "X-ABHINOY", about: "BENGALI PLAY", category: "ON-STAGE", location: "Main Auditorium", day: "1", time: "12:30", participants: "", phrase:"Directing and acting can enrich our history and culture.",
+  Eventss(name: "X-ABHINOY", about: "BENGALI PLAY", category: "ON-STAGE", location: "Main Auditorium", day: "1", time: "12:30", participants: "4 + 2", phrase:"Directing and acting can enrich our history and culture.",
       rules: """Street play involves presentation in outdoor public spaces without a specific and paying audience but a fairly large group. These spaces can be anywhere, including malls, car parks, street corners etc.Street theatre is a form of theatrical performance and presentation in outdoor public spaces without a specific paying audience.
 
 1. No. of participants : 4+2 
@@ -445,7 +447,7 @@ List<Eventss> OnStage = [
 
 """,
       link: "images/X-ABHINOY"),
-  Eventss(name: "X-ACT", about: "AD-SPOOF", category: "ON-STAGE", location: "AV Room", day: "3", time: "9:00", participants: "", phrase:"Kya aapke toothpaste mein namak hai?!",
+  Eventss(name: "X-ACT", about: "AD-SPOOF", category: "ON-STAGE", location: "AV Room", day: "3", time: "9:00", participants: "5 + 2", phrase:"Kya aapke toothpaste mein namak hai?!",
       rules: """A parody advertisement is a fictional advertisement for a non-existent product, either done within another advertisement for an actual product, or done simply as parody of advertisements—used either as a way of ridiculing or drawing negative attention towards a real advertisement or such an advertisement's subject, or as a comedic device, such as in a comedy skit or sketch
 
 1. No. of participants: 5 + 2
@@ -464,7 +466,7 @@ List<Eventss> OnStage = [
 
 """,
       link: "images/X-ACT"),
-  Eventss(name: "X-DROP", about: "RAP BATTTLE & BEATBOXING", category: "ON-STAGE", location: "Soumitra Sadan", day: "1", time: "1:30", participants: "", phrase:"Apna time aayega!",
+  Eventss(name: "X-DROP", about: "RAP BATTTLE & BEATBOXING", category: "ON-STAGE", location: "Soumitra Sadan", day: "1", time: "1:30", participants: "1 + 1", phrase:"Apna time aayega!",
       rules: """Battle rap is a type of rapping performed between two or more performers that incorporates boasts, and wordplay. Battle rap is often performed or freestyled spontaneously in live battles, "where MCs will perform on the same stage to see who has the better verses", although it can also appear on studio albums.
 
 1. No. of participants: 1 + 1 (1 Rapper and 1 Beatboxer)
@@ -475,7 +477,7 @@ List<Eventss> OnStage = [
 
 """,
       link: "images/X-DROP"),
-  Eventss(name: "X-RHYME", about: "SLAM POETRY", category: "ON-STAGE", location: "Reading Room", day: "2", time: "9:00", participants: "", phrase:"People don’t remember the characters, they only remember the poets.",
+  Eventss(name: "X-RHYME", about: "SLAM POETRY", category: "ON-STAGE", location: "Reading Room", day: "2", time: "9:00", participants: "1", phrase:"People don’t remember the characters, they only remember the poets.",
       rules: """Slam poetry, a form of performance poetry that combines the elements of performance, writing, competition, and audience participation. It is performed at events called poetry slams, or simply slams. The name slam came from how the audience has the power to praise or, sometimes, destroy a poem and from the high-energy performance style of the poets.
 
 1. Participants: 1
@@ -492,7 +494,7 @@ List<Eventss> OnStage = [
 
 """,
       link: "images/X-RHYME"),
-  Eventss(name: "X-RAGA", about: "EASTERN MUSIC", category: "ON-STAGE", location: "Xavier Hall", day: "2", time: "12:00", participants: "", phrase:"Where words fail, music speaks",
+  Eventss(name: "X-RAGA", about: "EASTERN MUSIC", category: "ON-STAGE", location: "Xavier Hall", day: "2", time: "12:00", participants: "6 + 4", phrase:"Where words fail, music speaks",
       rules: """Eastern classical music is essentially homophonic meaning that it focuses on melodies created by using an arrangement of notes. Its magic is experienced through the use of different melodies created within the structure of ragas.
 
 1. Participants: 6 + 4
@@ -504,7 +506,7 @@ List<Eventss> OnStage = [
 4. Semi-classical Bollywood songs are allowed. (Subject to judges discretion)
 """,
       link: "images/X-RAGA"),
-  Eventss(name: "X-HOP", about: "DANCE FACE OFF", category: "ON-STAGE", location: "Gymnasium Podium", day: "1", time: "12:30", participants: "", phrase:"When in doubt, dance it out!",
+  Eventss(name: "X-HOP", about: "DANCE FACE OFF", category: "ON-STAGE", location: "Gymnasium Podium", day: "1", time: "12:30", participants: "1 + 1", phrase:"When in doubt, dance it out!",
       rules: """Dance Face-Off involves two individual dancers competing against each other in one-on-one battles.It is a competition, or a round in a competition, in which a number of dancers compete against each other until a winner is declared..
 
 1. Participants: 1 + 1
@@ -519,10 +521,10 @@ List<Eventss> OnStage = [
 
 """,
       link: "images/X-HOP"),
-  Eventss(name: "X-TRAVANGANCE", about: "WESTERN DANCE", category: "ON-STAGE", location: "Main Auditorium", day: "3", time: "2:30", participants: "", phrase:"Jackson not Jordan!",
+  Eventss(name: "X-TRAVANGANCE", about: "WESTERN DANCE", category: "ON-STAGE", location: "Main Auditorium", day: "3", time: "2:30", participants: "6 + 4", phrase:"Jackson not Jordan!",
       rules: """Dance is a performing art form consisting of sequences of movement, either improvised or purposefully selected. This movement has aesthetic and often symbolic value.
 
-1. Participants: 6+4. 6 participants to be present on stage at all times.
+1. Participants: 6 + 4. 6 participants to be present on stage at all times.
 
 2. Duration: 5+3.
 
@@ -536,7 +538,7 @@ List<Eventss> OnStage = [
 
 """,
       link: "images/X-TRAVANGANCE"),
-  Eventss(name: "X-ACOUSTIC", about: "WESTERN MUSIC", category: "ON-STAGE", location: "Main Auditorium", day: "2", time: "2:00", participants: "", phrase:"Professional bathroom singers finally have a chance to showcase their talents.",
+  Eventss(name: "X-ACOUSTIC", about: "WESTERN MUSIC", category: "ON-STAGE", location: "Main Auditorium", day: "2", time: "2:00", participants: "5 + 3", phrase:"Professional bathroom singers finally have a chance to showcase their talents.",
       rules: """Western music is a form of country music composed by and about the people who settled and worked throughout the Western United States and Western Canada. Western music celebrates the lifestyle of the cowboy on the open ranges, Rocky Mountains, and prairies of Western North America.
 
 1. Participants: 5+3. 5 participants to be present on stage at all times.
@@ -550,7 +552,7 @@ List<Eventss> OnStage = [
 5. Vulgar lyrics will lead to immediate disqualification.
 """,
       link: "images/X-ACOUSTIC"),
-  Eventss(name: "X-PUN", about: "STAND UP", category: "ON-STAGE", location: "Main Auditorium", day: "2", time: "10:00", participants: "", phrase:"Scuse me! Brudda? Brudda idhar",
+  Eventss(name: "X-PUN", about: "STAND UP", category: "ON-STAGE", location: "Main Auditorium", day: "2", time: "10:00", participants: "1", phrase:"Scuse me! Brudda? Brudda idhar",
       rules: """Stand-up comedy is a comedic performance to a live audience in which the performer addresses the audience directly from the stage. The performer is known as a comedian, comic or stand-up.
 Stand-up comedy consists of one-liners, stories, observations or a shtick that may incorporate props, music, magic tricks or ventriloquism.
 
@@ -566,7 +568,7 @@ Stand-up comedy consists of one-liners, stories, observations or a shtick that m
 
 """,
       link: "images/X-PUN"),
-  Eventss(name: "X-VOGUE", about: "FASHION SHOW", category: "ON-STAGE", location: "Main Auditorium", day: "1", time: "4:30", participants: "", phrase:"Make the stage your world, Make the world your Runway.",
+  Eventss(name: "X-VOGUE", about: "FASHION SHOW", category: "ON-STAGE", location: "Main Auditorium", day: "1", time: "4:30", participants: "8 + 2", phrase:"Make the stage your world, Make the world your Runway.",
       rules: """Fashion is a form of self-expression and autonomy at a particular period and place and in a specific context, of clothing, footwear, lifestyle, accessories, makeup, hairstyle, and body posture.
 
 1. Participants 8+2 (including backstage)

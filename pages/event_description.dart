@@ -166,7 +166,7 @@ class _EventssState extends State<Eventss> {
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 32,
-                      fontFamily: 'Xavier2',
+                      fontFamily: 'Xavier1',
                     ),
                   ),
                 ],
@@ -180,7 +180,7 @@ class _EventssState extends State<Eventss> {
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 32,
-                      fontFamily: 'Xavier2',
+                      fontFamily: 'Xavier1',
                     ),
                   ),
                 ],
@@ -194,7 +194,7 @@ class _EventssState extends State<Eventss> {
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 32,
-                      fontFamily: 'Xavier2',
+                      fontFamily: 'Xavier1',
                     ),
                   ),
                 ],
@@ -208,7 +208,7 @@ class _EventssState extends State<Eventss> {
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 32,
-                      fontFamily: 'Xavier2',
+                      fontFamily: 'Xavier1',
                     ),
                   ),
                 ],
@@ -222,12 +222,12 @@ class _EventssState extends State<Eventss> {
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 32,
-                      fontFamily: 'Xavier2',
+                      fontFamily: 'Xavier1',
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: height*.06400,),
+              SizedBox(height: height*.03,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -236,7 +236,7 @@ class _EventssState extends State<Eventss> {
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 32,
-                      fontFamily: 'Xavier2',
+                      fontFamily: 'Xavier1',
                     ),
                   ),
                 ],
@@ -248,7 +248,7 @@ class _EventssState extends State<Eventss> {
                 height: 80,
                 thickness: 2,
               ),
-              SizedBox(height: height*.06400,),
+              SizedBox(height: height*.005,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
@@ -256,15 +256,14 @@ class _EventssState extends State<Eventss> {
                     'EVENT  RULES',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 28,
-                      fontFamily: 'Xavier2',
+                      fontSize: 32,
+                      fontFamily: 'Xavier3',
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: height*.02400,),
               Padding(
-                padding: EdgeInsets.all(0.05*MediaQuery.of(context).size.width),
+                padding: EdgeInsets.fromLTRB(0.05*MediaQuery.of(context).size.width, 18, 0.05*MediaQuery.of(context).size.width, 0.05*MediaQuery.of(context).size.width),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -274,7 +273,7 @@ class _EventssState extends State<Eventss> {
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 24,
-                          fontFamily: 'Xavier2',
+                          fontFamily: 'Xavier3',
                         ),
                       ),
                     ),

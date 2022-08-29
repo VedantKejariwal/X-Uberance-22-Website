@@ -1,4 +1,3 @@
-// ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -118,10 +117,49 @@ class _TeamState extends State<Team> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children:[
-                        SizedBox(height:0.1, width:width*0.2),
-                        ImgRtr(name: "MRS. JOEETA BASU", designation: "TEACHER-IN-CHARGE", about: "______", link: "images/background.png"),
-                        ImgRtr(name: "MR. SOMNATH DHAR", designation: "TEACHER-IN-CHARGE", about: "______", link: "images/background.png"),
-                        SizedBox(height:0.1, width:width*0.2),
+                        Column(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Container(
+                                height: 0.125*MediaQuery.of(context).size.width,
+                                width: 0.125*MediaQuery.of(context).size.width,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage('images/background.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height:4.0, width:0.1),
+                            Text("JOOETA BASU", style:const TextStyle(color:Colors.white, fontFamily: "School-Outfit-Regular", )),
+                            const SizedBox(height:2.0, width:0.1),
+                            Text("TEACHER-IN-CHARGE", style:const TextStyle(color:Colors.white, fontFamily: "School-Outfit-Regular", )),
+                          ],
+                        ),
+
+                        Column(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Container(
+                                height: 0.125*MediaQuery.of(context).size.width,
+                                width: 0.125*MediaQuery.of(context).size.width,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage('images/background.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height:4.0, width:0.1),
+                            Text("SOMNATH DHAR", style:const TextStyle(color:Colors.white, fontFamily: "School-Outfit-Regular", )),
+                            const SizedBox(height:2.0, width:0.1),
+                            Text("TEACHER-IN-CHARGE", style:const TextStyle(color:Colors.white, fontFamily: "School-Outfit-Regular", )),
+                          ],
+                        ),
                       ],
                     ),
                     const Divider(
@@ -154,12 +192,7 @@ class _TeamState extends State<Team> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children:[
-                        SizedBox(height:0.1, width:width*0.05),
-                        ImgRtr(name: "DHRUV  RAMPURIA", designation: "CONVENER",
-                            about: """If discipline had a name, it would be Dhruv Rampuria. Aspiring to be a lawyer, he is fit to be the protege of Louis Litt. A board member of X-Commercia, he is an oratory genius who will make you believe anything and everything with his skills. If you don't listen to him, he'll wear you down until things are done according to him just like Leonard wore down Penny. An  epitome of discipline and order, seeing him smile is a one in a million moment. Particular in his work, he brings to the table a plethora of abilities as the co-convener of X-Uberance ‘22. Dhruv's hobbies include giving unnecessary speeches, calling unwanted meetings and bullying the juniors.
 
-PS: If you can't find him, he's probably reviewing some documents (for the third time).""",
-                            link: "images/background.png"),
                         ImgRtr(name: "SHUBHAM  KOTHARI", designation: "CONVENER",
                             about: """Presenting you the co convener of X-Uberance, Shubham Kothari. He is also on the board of one of the most prestigious clubs in Xaviers, X-Commercia and also a part of the basketball team. (Even though he misses under the board shots) and the dance team (he is the apparent “brawn“ of the team).
 
@@ -167,15 +200,19 @@ From being a downright nerd to being the convener of X-uberance,his journey has 
 
 PS: if you can't find him, he's probably thoughting about being in SRCC""",
                             link: "images/background.png"),
+                        ImgRtr(name: "DHRUV  RAMPURIA", designation: "CONVENER",
+                            about: """If discipline had a name, it would be Dhruv Rampuria. Aspiring to be a lawyer, he is fit to be the protege of Louis Litt. A board member of X-Commercia, he is an oratory genius who will make you believe anything and everything with his skills. If you don't listen to him, he'll wear you down until things are done according to him just like Leonard wore down Penny. An  epitome of discipline and order, seeing him smile is a one in a million moment. Particular in his work, he brings to the table a plethora of abilities as the co-convener of X-Uberance ‘22. Dhruv's hobbies include giving unnecessary speeches, calling unwanted meetings and bullying the juniors.
 
-                        SizedBox(height:0.18, width:width*0.05),
+PS: If you can't find him, he's probably reviewing some documents (for the third time).""",
+                            link: "images/background.png"),
+
                       ],
                     ),
                     SizedBox(height: height*.04),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children:[
-                        SizedBox(height:0.1, width:width*0.08),
+
                         ImgRtr(name: "MADHAV  SHAH", designation: "SECRETARY",
                             about: """ A true sportsperson from his mind and body. He has been a part of every sports team of our school to have ever existed. From being 4ft in class 11 and 4ft 1 inch in class 12, he has come a long way. He might be difficult to spot on the field(without binoculars) but he manages to score enough goals or hit enough boundaries to make his opponent cry. 
 From carrying the dance team on his shoulders to getting carried on the shoulders of the dance team, he deserves his post as much as he deserves the spotlight he receives in every event.
@@ -190,14 +227,14 @@ PS: If you can't find him , he's probably at the gym trying to bench 100 kg and 
 """,
                             link: "images/background.png"),
 
-                        SizedBox(height:0.18, width:width*0.06),
+
                       ],
                     ),
                     SizedBox(height: height*.04),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children:[
-                        SizedBox(height:0.1, width:width*0.05),
+
                         ImgRtr(name: "AMANI  AGARWAL", designation: "DIRECTOR",
                             about: """ A Born Leader (literally). A guy who has been the undisputed representative, vice captain and captain of Berchmans House for the past 7 years (felt like a century though) has always been a motivation for people older, younger or equal to him and people have to always look up to him, not because he is an inspiration for all but because of how tall he is.
 
@@ -230,13 +267,13 @@ PS: If you can’t find him, he’s probably roaming around in the restaurants o
                             link: "images/background.png"),
 
 
-                        SizedBox(height:0.18, width:width*0.05),                ],
+                      ],
                     ),
                     SizedBox(height: height*.04),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children:[
-                        SizedBox(height:0.1, width:width*0.05),
+
                         ImgRtr(name: "HITANSH  AGARWAL", designation: "TECHNICAL  DIRECTOR",
                             about: """He has been a part of all the events where even a slight tech is involved from preparing songs for Fashion Show to preparing the background video for dance which led him to being on the board of the newest and one of the most inclusive clubs of St. Xavier’s, X-Code (Computer Club). He is the only one visible everywhere, especially if you sit behind him in class.
 
@@ -254,7 +291,7 @@ PS: If you can’t find him, he’s probably editing something on his computer
 PS: If you can’t find him, he’s probably figuring out how to get into Ivy League Universities.
 """,
                             link: "images/background.png"),
-                        SizedBox(height:0.18, width:width*0.05),
+
 
                       ],
                     ),
@@ -262,7 +299,7 @@ PS: If you can’t find him, he’s probably figuring out how to get into Ivy Le
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children:[
-                        SizedBox(height:0.1, width:width*0.06),
+
                         ImgRtr(name: "HARSH  VARDHAN  KASAT", designation: "TREASURER",
                             about: """Ladies and Gentlemen, presenting to you Harsh Vardhan Kasat a.k.a. our very own Mr. Ambani (please note not Gujarati). It would be safe to infer Mr. Kasat as "The Money Man" of X-Uberance 22. A very unique talent of laughing at his own jokes, even before completing it, Harsh at times pulls it off but usually is unable to. 
 You have to be impeccably extraordinary to be able to find fault in his accounts papers cause he hardly makes one. 
@@ -271,17 +308,17 @@ He draws most of his “inspiration” from his bench mate aka our convenor, Dhr
 P.S: If you don't find him, he is busy counting money for X-Uberance ‘22...
 """,
                             link: "images/background.png"),
-                        ImgRtr(name: "ARYAN  SHREEDHARAN", designation: "TREASURER",
+                        ImgRtr(name: "ADITYA  SHREEDHARAN", designation: "TREASURER",
                             about: """TO BE FILLED LATER""",
                             link: "images/background.png"),
-                        SizedBox(height:0.18, width:width*0.07),
+
                       ],
                     ),
                     SizedBox(height: height*.04),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children:[
-                        SizedBox(height:0.1, width:width*0.1),
+
                         ImgRtr(name: "AARAV  MODI", designation: "PUBLIC  RELATIONS  OFFICER",
                             about: """The student to whom everyone runs to for help in maths or science. His life is just as hard as anyone else's except for the fact that he has a house for every mood. Already set to enter into the major leagues of research in various fields, he still has the dream of playing cricket. We hope he is set to manage X-Uberance just as he is set on going to the USA and then returning to India for reasons unknown. So don't be surprised to hear his name chant in the middle of the fest for no reason… just join in😉
                                 
@@ -294,7 +331,7 @@ P.S: If you don't find him, he is busy counting money for X-Uberance ‘22...
 PS: If you can’t find him, he’s probably chewing gum in front of “some people”.
 """,
                             link: "images/background.png"),
-                        SizedBox(height:0.18, width:width*0.105),
+
                       ],
                     ),
                     SizedBox(height: height*.07221),
