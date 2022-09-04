@@ -112,8 +112,8 @@ class _ScheduleState extends State<Schedule> {
                       ),
                       const Divider(
                         color: Colors.white,
-                        indent: 450,
-                        endIndent: 450,
+                        indent: 500,
+                        endIndent: 500,
                         height: 20,
                         thickness: 2,
                       ),
@@ -123,13 +123,13 @@ class _ScheduleState extends State<Schedule> {
                               style: const TextStyle(
                               fontSize: 15,
                                   color: Colors.white,
-                                fontFamily: 'Xavier1'
+                                fontFamily: 'Xavier2'
                       ),
                       ),
                       const Divider(
                         color: Colors.white,
-                        indent: 450,
-                        endIndent: 450,
+                        indent: 500,
+                        endIndent: 500,
                         height: 20,
                         thickness: 2,
                       ),
@@ -193,7 +193,7 @@ class _ScheduleState extends State<Schedule> {
                         thickness: 2,
                       ),
                       Container(
-                        padding: const EdgeInsets.fromLTRB(100, 30, 100, 100),
+                        padding: const EdgeInsets.fromLTRB(100, 30, 129, 100),
                         child : Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -208,6 +208,8 @@ class _ScheduleState extends State<Schedule> {
                                     children:
 
                                     EventName.map((Event){
+                                      if(Event!='EVENTS')
+                                        {
                                       return Padding(
                                         padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 13),
                                         child: TextButton(
@@ -246,7 +248,46 @@ class _ScheduleState extends State<Schedule> {
                                         ),
                                       );
 
-                                    }).toList(),
+                                    }
+                                    else
+                                      {
+                                        return Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 0,vertical: 13),
+                                            child: RichText(
+
+                                              text: TextSpan(
+                                                children:
+                                                [
+
+                                                  TextSpan(
+                                                    text : '$Event\n',
+                                                    style: const TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 23,
+                                                      fontFamily: 'Xavier2',
+                                                    ),
+                                                  ),
+
+                                                  const WidgetSpan(
+                                                      child: SizedBox(height:15,)
+                                                  ),
+                                                  TextSpan(
+                                                    text: Events[EventName.indexOf(Event)],
+                                                    style: const TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 12,
+                                                      fontFamily: 'Xavier2',
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+
+                                              textAlign: TextAlign.center,
+                                            )
+                                        );
+                                        }
+                                      }
+                                    ).toList(),
 
 
                                   ),
@@ -255,9 +296,7 @@ class _ScheduleState extends State<Schedule> {
                                     children:
                                     Venue.map((Venue){
                                       return Padding(
-                                        padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 19),
-                                        child: TextButton(
-                                          onPressed: (){},
+                                        padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 20.9),
                                           child: Text(
                                             Venue,
                                             style: const TextStyle(
@@ -266,7 +305,6 @@ class _ScheduleState extends State<Schedule> {
                                               fontFamily: 'Xavier2',
                                             ),
                                           ),
-                                        ),
                                       );
                                     }).toList(),
                                   ),
@@ -275,9 +313,7 @@ class _ScheduleState extends State<Schedule> {
                                     children:
                                     Timing.map((Time){
                                       return Padding(
-                                        padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 19),
-                                        child: TextButton(
-                                          onPressed: (){},
+                                        padding: const EdgeInsets.symmetric(horizontal: 0.0,vertical: 20.9),
                                           child: Text(
                                             Time,
                                             style: const TextStyle(
@@ -286,7 +322,6 @@ class _ScheduleState extends State<Schedule> {
                                               fontFamily: 'Xavier2',
                                             ),
                                           ),
-                                        ),
                                       );
                                     }).toList(),
                                   ),
