@@ -1,10 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import '../services/image_container_return.dart';
 import '../pages/home.dart';
 import '../pages/events.dart';
 import '../pages/schedule.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 class Team extends StatefulWidget {
   const Team({Key? key}) : super(key: key);
 
@@ -82,7 +83,7 @@ class _TeamState extends State<Team> {
                           Text("OUR  TEAM",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 0.043*width,
+                              fontSize: 0.053*width,
                               fontFamily: 'Xavier2',
                             ),),
                         ]
@@ -101,7 +102,7 @@ class _TeamState extends State<Team> {
                           Text("TEACHERS",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 0.033*width,
+                              fontSize: 0.043*width,
                               fontFamily: 'Xavier2',
                             ),),
                         ]
@@ -132,11 +133,11 @@ class _TeamState extends State<Team> {
                                 ),
                               ),
                             ),
-                        const SizedBox(height:4.0, width:0.1),
-                        Text("JOOETA BASU", style:const TextStyle(color:Colors.white, fontFamily: "School-Outfit-Regular", )),
-                        const SizedBox(height:2.0, width:0.1),
-                        Text("TEACHER-IN-CHARGE", style:const TextStyle(color:Colors.white, fontFamily: "School-Outfit-Regular", )),
-                         ],
+                            const SizedBox(height:4.0, width:0.1),
+                            Text("JOOETA BASU", style:const TextStyle(color:Colors.white, fontFamily: "School-Outfit-Regular", )),
+                            const SizedBox(height:2.0, width:0.1),
+                            Text("TEACHER-IN-CHARGE", style:const TextStyle(color:Colors.white, fontFamily: "School-Outfit-Regular", )),
+                          ],
                         ),
 
                         Column(
@@ -176,7 +177,7 @@ class _TeamState extends State<Team> {
                           Text("CORE COMMITTEE",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 0.033*width,
+                              fontSize: 0.043*width,
                               fontFamily: 'Xavier2',
                             ),),
                         ]
@@ -188,6 +189,28 @@ class _TeamState extends State<Team> {
                       height: 80,
                       thickness: 2,
                     ),
+                    SizedBox(height: height*.01221),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border(
+                                bottom: BorderSide(
+                                  color: Colors.white,
+                                  width: 3.0,
+                                ),
+                              ),
+                            ),
+                            child : Text("CONVENER",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 0.025*width,
+                                fontFamily: 'Xavier2',
+                              ),),
+                          ),
+                        ]
+                    ),
                     SizedBox(height: height*.02),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -195,18 +218,37 @@ class _TeamState extends State<Team> {
 
                         ImgRtr(name: "SHUBHAM  KOTHARI", designation: "CONVENER",
                             about: """Presenting you the co convener of X-Uberance, Shubham Kothari. He is also on the board of one of the most prestigious clubs in Xaviers, X-Commercia and also a part of the basketball team. (Even though he misses under the board shots) and the dance team (he is the apparent “brawn“ of the team).
-
 From being a downright nerd to being the convener of X-uberance,his journey has been one with many ups and downs. When he reached class 11 with an amicable academic record, Shubham discovered that there were other things in the world, which he was not aware of. He's the kind of guy who shouldn't even have an Instagram account (but his dms suggest otherwise). You'd be surprised to find out that he has his own podcast (although no one listens to it). The only time he isn't listening to music, he's sleeping. Jokes apart, Shubhams contribution to this fest has been immense. With his inherent Gujrati skills and his 'jugaad', he has provided us with all the help we need. His reach extends to sponsors, event managers and what not. Shubham is overly competitive in  academics which annoys both his peers and his teachers (they hate him because he sleeps in class). He always fulfills his commitments to the group and is a man of his word.
-
 PS: if you can't find him, he's probably thoughting about being in SRCC""",
                             link: "images/background.png"),
                         ImgRtr(name: "DHRUV  RAMPURIA", designation: "CONVENER",
                             about: """If discipline had a name, it would be Dhruv Rampuria. Aspiring to be a lawyer, he is fit to be the protege of Louis Litt. A board member of X-Commercia, he is an oratory genius who will make you believe anything and everything with his skills. If you don't listen to him, he'll wear you down until things are done according to him just like Leonard wore down Penny. An  epitome of discipline and order, seeing him smile is a one in a million moment. Particular in his work, he brings to the table a plethora of abilities as the co-convener of X-Uberance ‘22. Dhruv's hobbies include giving unnecessary speeches, calling unwanted meetings and bullying the juniors.
-
 PS: If you can't find him, he's probably reviewing some documents (for the third time).""",
                             link: "images/background.png"),
 
                       ],
+                    ),
+                    SizedBox(height: height*.0521),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border(
+                                bottom: BorderSide(
+                                  color: Colors.white,
+                                  width: 3.0,
+                                ),
+                              ),
+                            ),
+                            child : Text("SECRETARY",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 0.025*width,
+                                fontFamily: 'Xavier2',
+                              ),),
+                          ),
+                        ]
                     ),
                     SizedBox(height: height*.04),
                     Row(
@@ -216,19 +258,39 @@ PS: If you can't find him, he's probably reviewing some documents (for the third
                         ImgRtr(name: "MADHAV  SHAH", designation: "SECRETARY",
                             about: """ A true sportsperson from his mind and body. He has been a part of every sports team of our school to have ever existed. From being 4ft in class 11 and 4ft 1 inch in class 12, he has come a long way. He might be difficult to spot on the field(without binoculars) but he manages to score enough goals or hit enough boundaries to make his opponent cry. 
 From carrying the dance team on his shoulders to getting carried on the shoulders of the dance team, he deserves his post as much as he deserves the spotlight he receives in every event.
-
 PS: If you can’t find him, he is probably trying to perfect his pull shot for the next match
 """,
                             link: "images/background.png"),
                         ImgRtr(name: "KRISH  MURJCHANDANDANI", designation: "SECRETARY",
                             about: """The secretary no one expected. His contributions to this fest have been valuable (somewhat). You name the sport and he plays it (at least he claims). He has a knack for getting his limbs broken. Always focusing on his diet and flexing his supposed muscles, he is a spoiled, hopeless kid who never stops talking (about himself). Also interested in reading books and writing poems, his favourite hobby is to use words which no one understands and then brag about it. If you ever find this guy NOT smiling it's probably because his crush blocked him.
-
 PS: If you can't find him , he's probably at the gym trying to bench 100 kg and break his PR (he'll fail again).
 """,
                             link: "images/background.png"),
 
 
                       ],
+                    ),
+                    SizedBox(height: height*.02221),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border(
+                                bottom: BorderSide(
+                                  color: Colors.white,
+                                  width: 3.0,
+                                ),
+                              ),
+                            ),
+                            child : Text("DIRECTOR",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 0.025*width,
+                                fontFamily: 'Xavier2',
+                              ),),
+                          ),
+                        ]
                     ),
                     SizedBox(height: height*.04),
                     Row(
@@ -237,37 +299,53 @@ PS: If you can't find him , he's probably at the gym trying to bench 100 kg and 
 
                         ImgRtr(name: "AMANI  AGARWAL", designation: "DIRECTOR",
                             about: """ A Born Leader (literally). A guy who has been the undisputed representative, vice captain and captain of Berchmans House for the past 7 years (felt like a century though) has always been a motivation for people older, younger or equal to him and people have to always look up to him, not because he is an inspiration for all but because of how tall he is.
-
 Anyways, moving forward, the guy who never stops studying, has mood swings(a generally calm and collected person but if you see him angry, RUN) and doesn’t make a noise while sneezing, has always achieved everything he set out for and all of us know he will achieve everything except for the post he deserved...
-
 PS: If you can’t find him, he’s probably figuring out how to get the Berchmans team ready
 """,
                             link: "images/background.png"),
                         ImgRtr(name: "HARSH  CHITLANGIA", designation: "DIRECTOR",
                             about: """Not only the house captain but also the captain of the undisputed football team(Britto). His grades might tell you that he is studious but he plays tennis better than the rest of the school COMBINED. People call him captain "cool" until he starts defending the ball in inter school football matches as well as he defended his post in X-Uberance. Also you will probably find him holding the sports trophy at the end of the year, although he didn’t win a trophy in triathlon 
-
 jokes apart he is one of the best athletes ,no wonder we call him horsepower having stamina more than JOHNNY depp.
-
 PS:  If you can't find him, he will probably be at training figuring out how to beat the next team
 """,
                             link: "images/background.png"),
                         ImgRtr(name: "RIDDHAM  KUMAR  AGARWAL", designation: "DIRECTOR",
                             about: """The boy who came in as a substitute representative in class 9 has had to prove his worth time and again but to everyone's surprise, he never failed in doing so. The only IIT Aspirant in the core, he spends more of his time in school and football (where he gave the only goal our school conceded) than in studying. While he pretends to be studious, the Gonzaga House Captain is “secretly” passionate about music and is the self-proclaimed Arijit Singh of our school.
 Never afraid to rewatch Mighty Raju, he is always up for any task, be it warming the benches of the football team or sitting on a call till 2 to finalize decisions for the fest.
-
 PS: If you can’t find him, he’s probably on Instagram Live showcasing his “singing” skills.
 """,
                             link: "images/background.png"),
                         ImgRtr(name: "ARYAN  JAIN", designation: "DIRECTOR",
                             about: """ The most chilled out person in the core who has no care for the world, Aryan’s people skills come in handy to anyone who ever needs it. A guy who never studies throughout the year and still ends up getting the best marks in most subjects, he is a person filled with luck and brains but sadly no brawn. 
 He is another uncontested captain of our school from class 8. Quick on his feet, be it on the field or the dance floor, he is always at the ready for any task.
-
 PS: If you can’t find him, he’s probably roaming around in the restaurants of Kolkata.
 """,
                             link: "images/background.png"),
 
 
-             ],
+                      ],
+                    ),
+                    SizedBox(height: height*.02221),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border(
+                                bottom: BorderSide(
+                                  color: Colors.white,
+                                  width: 3.0,
+                                ),
+                              ),
+                            ),
+                            child : Text("TECHNICAL  DIRECTOR",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 0.025*width,
+                                fontFamily: 'Xavier2',
+                              ),),
+                          ),
+                        ]
                     ),
                     SizedBox(height: height*.04),
                     Row(
@@ -276,24 +354,42 @@ PS: If you can’t find him, he’s probably roaming around in the restaurants o
 
                         ImgRtr(name: "HITANSH  AGARWAL", designation: "TECHNICAL  DIRECTOR",
                             about: """He has been a part of all the events where even a slight tech is involved from preparing songs for Fashion Show to preparing the background video for dance which led him to being on the board of the newest and one of the most inclusive clubs of St. Xavier’s, X-Code (Computer Club). He is the only one visible everywhere, especially if you sit behind him in class.
-
 Apart from all this he might be the only one brave enough to wear jeans to school and still show up to the Principal’s office casually.
-
 Some people call him potato not because he looks like one but because he is one. 
 A human cushion and the Charles Babbage of Xaviers, talking no sense maximum number of the times but still managing to be one of the smartest chaps in his batch.
-
 PS: If you can’t find him, he’s probably editing something on his computer
 """,
                             link: "images/background.png"),
                         ImgRtr(name: "VEDANT  KEJRIWAL", designation: "TECHNICAL  DIRECTOR",
                             about: """He is known for two things: having the most basic tastes known to man and bragging about meeting Nita Ambani. Always hard at work, Vedant functions as the core committee's comic relief (mostly when he isn't aware of it) and the person who puts the most pressure on the tech team. Just like Peter Dinklage in Game of Thrones (and Vedant in real life), this description is short.
-
 PS: If you can’t find him, he’s probably figuring out how to get into Ivy League Universities.
 """,
                             link: "images/background.png"),
 
 
                       ],
+                    ),
+                    SizedBox(height: height*.02221),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border(
+                                bottom: BorderSide(
+                                  color: Colors.white,
+                                  width: 3.0,
+                                ),
+                              ),
+                            ),
+                            child : Text("TREASURER",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 0.025*width,
+                                fontFamily: 'Xavier2',
+                              ),),
+                          ),
+                        ]
                     ),
                     SizedBox(height: height*.04),
                     Row(
@@ -304,15 +400,36 @@ PS: If you can’t find him, he’s probably figuring out how to get into Ivy Le
                             about: """Ladies and Gentlemen, presenting to you Harsh Vardhan Kasat a.k.a. our very own Mr. Ambani (please note not Gujarati). It would be safe to infer Mr. Kasat as "The Money Man" of X-Uberance 22. A very unique talent of laughing at his own jokes, even before completing it, Harsh at times pulls it off but usually is unable to. 
 You have to be impeccably extraordinary to be able to find fault in his accounts papers cause he hardly makes one. 
 He draws most of his “inspiration” from his bench mate aka our convenor, Dhruv Rampuria and he means it when he says it. 
-
 P.S: If you don't find him, he is busy counting money for X-Uberance ‘22...
 """,
                             link: "images/background.png"),
-                        ImgRtr(name: "ARYAN  SHREEDHARAN", designation: "TREASURER",
+                        ImgRtr(name: "ADITYA  SHREEDHARAN", designation: "TREASURER",
                             about: """TO BE FILLED LATER""",
                             link: "images/background.png"),
 
                       ],
+                    ),
+                    SizedBox(height: height*.02221),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border(
+                                bottom: BorderSide(
+                                  color: Colors.white,
+                                  width: 3.0,
+                                ),
+                              ),
+                            ),
+                            child : Text("PUBLIC  RELATIONS  OFFICER",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 0.025*width,
+                                fontFamily: 'Xavier2',
+                              ),),
+                          ),
+                        ]
                     ),
                     SizedBox(height: height*.04),
                     Row(
@@ -327,7 +444,6 @@ P.S: If you don't find him, he is busy counting money for X-Uberance ‘22...
                             link: "images/background.png"),
                         ImgRtr(name: "GOURAB  SAHA", designation: "PUBLIC  RELATIONS  OFFICER",
                             about: """ A self-declared introvert, he has spent most of his teenage life struggling to decide whether he should sleep 16 hours a day or give up on sleep for the next week (the choice often being the former only to be disrupted by a flurry of calls). Our Public Relations Officer has a reputation for excelling at a variety of things, from mathematics all the way to receiving mbappe without fail in PES. What often goes unnoticed about this somber individual, are his talents in navigation and babysitting (in case you ever get lost you know who to call). Having a particular knack for all things business and politics, one can find him in business events throughout the city, though meeting him there is probably not the best idea.
-
 PS: If you can’t find him, he’s probably chewing gum in front of “some people”.
 """,
                             link: "images/background.png"),
@@ -361,7 +477,7 @@ PS: If you can’t find him, he’s probably chewing gum in front of “some peo
                           Text("DEPARTMENT  HEADS",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 0.033*width,
+                              fontSize: 0.043*width,
                               fontFamily: 'Xavier2',
                             ),),
                         ]
@@ -399,7 +515,7 @@ PS: If you can’t find him, he’s probably chewing gum in front of “some peo
                           Text("TECH TEAM",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 0.033*width,
+                              fontSize: 0.043*width,
                               fontFamily: 'Xavier2',
                             ),),
                         ]
@@ -452,6 +568,7 @@ PS: If you can’t find him, he’s probably chewing gum in front of “some peo
                             ),),]
                       ),
                     ),
+                    SizedBox(height:1/7.5*height),
                     Container(
                       color: const Color(0xff2F303A),
                       height: ((1.6/5)*height),
@@ -465,9 +582,22 @@ PS: If you can’t find him, he’s probably chewing gum in front of “some peo
                                 const SizedBox(height:5, width:10),
                                 const Text("Location", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
                                 Container(
-                                  height: (3.5/5)*((1.6/5)*height),
-                                  width: (1/5.5)*width,
-                                  color: Colors.black,
+                                  child:
+                                  InkWell(
+                                    onTap: () {
+                                      launch("https://www.google.com/maps/place/St.+Xavier's+College+(Autonomous)+-+Kolkata/@22.5489161,88.356172,393m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x62c7778aead16f97!8m2!3d22.5489161!4d88.356172?hl=en-US");
+                                    },
+                                    child: Container(
+                                      height:(3.5/5)*((1.6/5)*height),
+                                      width: (1/5.5)*width,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: AssetImage("images/Xaviers.jpg"),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
                                 ),
                                 const Text("30 Mother Teresa Sarani, Kolkata-700016", style: TextStyle(color: Colors.white, fontFamily: 'Xavier3'),),
                               ]
