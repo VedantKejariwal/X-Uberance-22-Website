@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:xuberance2022_website/pages/event_description.dart';
 import '../services/constants.dart' as c;
 import 'package:page_transition/page_transition.dart';
 import '../pages/team2.dart';
@@ -85,6 +86,34 @@ class _Events3State extends State<Events3> {
         context,
         PageTransition(
           child: ret,
+          type: PageTransitionType.fade,
+          duration: const Duration(milliseconds: 500),
+        ));
+  }
+
+  Future<void> navigateToDescriptionlast(context) async {
+    
+    Navigator.push(
+        context,
+        PageTransition(
+          child: Eventss(name: "X-VOGUE", about: "FASHION SHOW", category: "ON-STAGE", location: "Main Auditorium", day: "1", time: "4:30", participants: "8 + 2", phrase:"Make the stage your world, Make the world your Runway.",
+              rules: """
+1. Participants 8+2 (including backstage)
+
+2. Duration 6+2
+
+3. All the tracks to be played will have to be sent to the fest’s official email address a week before the fest.
+
+4. Themes to be decided via lucky draw basis and to be informed in the reps meet.
+
+5. Rules are subject to change
+
+6. All attire and apparels must follow norms of decency.
+
+7. Judging criteria: relevance to theme, coordination, rampwalk, vibrancy.
+""",
+              link: "images_des/X-VOGUE"), 
+          
           type: PageTransitionType.fade,
           duration: const Duration(milliseconds: 500),
         ));
@@ -290,15 +319,18 @@ class _Events3State extends State<Events3> {
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.all(15.0),
-                                          child: Container(
-                                            height: 0.15 * width,
-                                            width: 0.15 * width,
-                                            decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                image: AssetImage(
-                                                  // ignore: prefer_interpolation_to_compose_strings
-                                                    "${'images/' + event1}.png"),
-                                                fit: BoxFit.scaleDown,
+                                          child: ClipRRect(
+                                            borderRadius: BorderRadius.circular(20.0),
+                                            child: Container(
+                                              height: 0.15 * width,
+                                              width: 0.15 * width,
+                                              decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                  image: AssetImage(
+                                                    // ignore: prefer_interpolation_to_compose_strings
+                                                      "${'images/' + event1}.png"),
+                                                  fit: BoxFit.scaleDown,
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -330,14 +362,17 @@ class _Events3State extends State<Events3> {
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.all(15.0),
-                                          child: Container(
-                                            height: 0.15 * width,
-                                            width: 0.15 * width,
-                                            decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                image: AssetImage(
-                                                    "${'images/' + event2}.png"),
-                                                fit: BoxFit.scaleDown,
+                                          child: ClipRRect(
+                                            borderRadius: BorderRadius.circular(20.0),
+                                            child: Container(
+                                              height: 0.15 * width,
+                                              width: 0.15 * width,
+                                              decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                  image: AssetImage(
+                                                      "${'images/' + event2}.png"),
+                                                  fit: BoxFit.scaleDown,
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -351,6 +386,42 @@ class _Events3State extends State<Events3> {
                             ),
                           ],
                         ),
+                      ],
+                    ),
+                    SizedBox(width: 0.15 * width, height: 30),
+                    Row(
+                      children: [
+                        SizedBox(width: 0.165 * width, height: 30),
+                         ClipRRect(
+                           borderRadius: BorderRadius.circular(20.0),
+                           child: InkWell(
+                             onTap: () {
+                               navigateToDescriptionlast(context);
+                               },
+                             child: Column(
+                               crossAxisAlignment: CrossAxisAlignment.center,
+                               children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(15.0),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20.0),
+                                    child: Container(
+                                      height: 0.15 * width,
+                                      width: 0.15 * width,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image:
+                                              AssetImage("images/X-VOGUE.png"),
+                                          fit: BoxFit.scaleDown,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                    ),
+                  ),
+                ) ,
                       ],
                     ),
                     SizedBox(height: height * .07221),
